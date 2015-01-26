@@ -39,5 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  OmniAuth.config.test_mode = true
+  
+  # Enable to make tests pass
+  # OmniAuth.config.test_mode = true
 end
