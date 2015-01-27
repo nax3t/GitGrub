@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+
   root "users#new"
   get "/auth/github/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
