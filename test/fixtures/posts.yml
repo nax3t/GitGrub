@@ -3,11 +3,13 @@
 one:
   place: MyString
   neighborhood: MyString
-  when: 2015-01-26 20:34:03
-  description: MyText
+  time: 2015-01-27 09:49:25
+  body: MyText
+  user_id: 1
 
 two:
   place: MyString
   neighborhood: MyString
-  when: 2015-01-26 20:34:03
-  description: MyText
+  time: 2015-01-27 09:49:25
+  body: MyText
+  user_id: 1
