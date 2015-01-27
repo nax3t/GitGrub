@@ -3,8 +3,9 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :place
       t.string :neighborhood
-      t.time :when
-      t.text :description
+      t.time :time
+      t.text :body
+      t.integer :user_id
 
       t.timestamps null: false
     end

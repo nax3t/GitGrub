@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
 	validates :place, presence: true
+	# validates :time, presence: true
+	validates :body, presence: true
 	validates :neighborhood, presence: true
-	validates :when, presence: true
-	validates :description, presence: true
+	belongs_to :user
 end
