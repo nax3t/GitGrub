@@ -1,18 +1,21 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe User, type: :model do
-# 	describe 'Attributes' do
-# 		it { is_expected.to respond_to :title }
-# 		it { is_expected.to respond_to :instructions }
-# 	end
+RSpec.describe User, type: :model do
+	describe 'Attributes' do
+		it { is_expected.to respond_to :provider }
+		it { is_expected.to respond_to :uid }
+    it { is_expected.to respond_to :name }
+	end
 
-#   describe 'Database' do
-#   	it { is_expected.to have_db_column :title }
-#   	it { is_expected.to have_db_column :instructions }
-#   end
+  describe 'Database' do
+  	it { is_expected.to have_db_column :provider }
+  	it { is_expected.to have_db_column :uid }
+    it { is_expected.to have_db_column :name }
+  end
 
-#   describe 'Validations' do
-#   	it { is_expected.to validate_presence_of :title }
-#   	it { is_expected.to validate_presence_of :instructions }
-#   end
-# end
+  describe 'Validations' do
+  	it { is_expected.to validate_presence_of :provider }
+  	it { is_expected.to validate_presence_of :uid }
+    it { is_expected.to validate_presence_of :name }
+  end
+end
