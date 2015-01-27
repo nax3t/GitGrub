@@ -44,9 +44,9 @@ feature 'Users creates a post', type: :feature do
     visit "/posts/#{post.id}/edit"
 
     fill_in 'Place', with: 'new place'
-    # fill_in 'Neighborhood', with: ''
-    # fill_in 'Time', with: ''
-    # fill_in 'Body', with: ''
+    fill_in 'Neighborhood', with: 'new neighborhood'
+    fill_in 'Time', with: nil
+    fill_in 'Body', with: 'new body'
 
     click_button 'Save'
 
