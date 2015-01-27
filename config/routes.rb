@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'posts/new'
+
+  get 'posts/edit'
+
+  get 'posts/show'
+
+  get 'posts/index'
+
   root "users#new"
   get "/auth/github/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
