@@ -1,0 +1,17 @@
+<h1>New post</h1>
+
+<%= form_for @post do |f| %>
+	<%= f.label :place %>
+	<%= f.text_field :place %>
+	<br>
+	<%= f.label :neighborhood %>
+	<%= f.text_field :neighborhood %>
+	<br>
+	<%= f.label :when %>
+	<%= f.time_field :when %>
+	<br>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<br>
+	<%= f.submit 'Save' %>
+<% end %>
