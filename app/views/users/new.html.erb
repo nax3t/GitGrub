@@ -1,6 +1,10 @@
 <%= render 'layouts/flash' %>
 <% if current_user %>
-  <%= "Welcome #{current_user.name}" %>
+	<% if current_user.name != '' && current_user.name != nil %>
+  	<%= "Welcome #{current_user.name}" %>
+  <% else %>
+  	<%= "Welcome #{current_user.nickname}" %>
+  <% end %>
   <%= link_to "Sign out", signout_path %>
 <% else %>
   <%= link_to "Sign up with GitHub", "/auth/github" %>
