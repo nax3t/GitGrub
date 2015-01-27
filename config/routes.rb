@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "users#new"
   get "/auth/github/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
