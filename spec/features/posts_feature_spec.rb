@@ -54,13 +54,13 @@ feature 'Users creates a post', type: :feature do
     expect(page).not_to have_content post.place 
   end
 
-#   scenario 'deleting a post' do
-#     visit "/posts/#{post.id}"
+  scenario 'deleting a post' do
+    visit "/posts/#{post.id}"
 
-#     click_link 'Delete'
+    click_link 'Delete'
 
-#     expect {
-#       visit "/posts/#{post.id}"
-#     }.to raise_error ActiveRecord::RecordNotFound
-#   end
+    expect {
+      visit "/posts/#{post.id}"
+    }.to raise_error ActiveRecord::RecordNotFound
+  end
 end
