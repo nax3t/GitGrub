@@ -85,4 +85,80 @@ RSpec.describe PostsController, type: :controller do
 		end 
 	end
 
+	describe '#edit' do 
+		let!(:post) { FactoryGirl.create(:post) }
+
+		before { get :edit, id: post.id }
+
+		it 'returns 200' do 
+			expect(response).to be_success
+		end
+
+		it 'assigns @post' do 
+			expect(assigns(:post)).to eq post 
+		end
+
+		it 'renders posts/edit' do 
+			expect(response).to render_template	'posts/edit'
+		end
+	end
+
+	describe '#update' do 
+		let!(:post) { FactoryGirl.create(:post) }
+
+		context 'valid params' do 
+			before do 
+				patch :update, id: post.id, post: {
+					place: 'new place',
+					neighborhood: 'new neighborhood',
+					time: 'new time',
+					body: 'new body'
+				}
+			end
+
+			it 'updates the post' do 
+				post = assigns(:post).reload
+				expect(post.place).to eq 'new place'
+				expect(post.neighborhood).to eq 'new neighborhood'
+				expect(post.time).to eq nil
+				expect(post.body).to eq 'new body'
+			end
+
+			it 'assigns @post' do 
+				expect(assigns(:post)).to eq post 
+			end
+
+			it 'redirects to the post' do 
+				expect(response).to redirect_to post_path(post)
+			end
+		end
+
+		context 'invalid params' do 
+			before do 
+				patch :update, id: post.id, post: {
+					place: '',
+					neighborhood: '',
+					time: '',
+					body: ''
+				}
+			end
+
+			it 'does not update the post' do 
+				post = assigns(:post).reload
+				expect(post.place).not_to eq ''
+				expect(post.neighborhood).not_to eq ''
+				expect(post.time).not_to eq ''
+				expect(post.body).not_to eq ''
+			end
+
+			it 'assigns @post' do 
+				expect(assigns(:post)).to eq post 
+			end 
+
+			it 'renders posts/edit' do 
+				expect(response).to render_template 'posts/edit'
+			end
+		end
+	end
+
 end

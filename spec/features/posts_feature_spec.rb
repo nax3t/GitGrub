@@ -40,19 +40,19 @@ feature 'Users creates a post', type: :feature do
     expect(page).to have_content post.place 
   end
 
-#   scenario 'updating a post' do 
-#     visit "/posts/#{post.id}/edit"
+  scenario 'updating a post' do 
+    visit "/posts/#{post.id}/edit"
 
-#     fill_in 'Place', with: 'SECRET_PLACE'
-#     fill_in 'Neighborhood', with: 'SECRET_NEIGHBORHOOD'
-#     fill_in 'Time', with: 'SECRET_TIME'
-#     fill_in 'Body', with: 'SECRET_BODY'
+    fill_in 'Place', with: 'new place'
+    # fill_in 'Neighborhood', with: ''
+    # fill_in 'Time', with: ''
+    # fill_in 'Body', with: ''
 
-#     click_button 'Save'
+    click_button 'Save'
 
-#     expect(page).to have_content 'SECRET_PLACE'
-#     expect(page).not_to have_content post.place 
-#   end
+    expect(page).to have_content 'new place'
+    expect(page).not_to have_content post.place 
+  end
 
 #   scenario 'deleting a post' do
 #     visit "/posts/#{post.id}"
