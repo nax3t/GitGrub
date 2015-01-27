@@ -1,6 +1,6 @@
 feature 'Users creates a post', type: :feature do
-  # given(:post) { FactoryGirl.create(:post) }
-  let(:post) { FactoryGirl.create(:post) }
+  given(:post) { FactoryGirl.create(:post) }
+  # let(:post) { FactoryGirl.create(:post) }
   
   scenario 'creating a post' do 
     visit '/posts/new'
@@ -23,6 +23,21 @@ feature 'Users creates a post', type: :feature do
     expect(page).to have_content post.neighborhood 
     expect(page).to have_content post.time 
     expect(page).to have_content post.body  
+  end
+
+  scenario 'showing all posts' do 
+    visit '/posts/new'
+
+    fill_in 'Place', with: 'Chipotle'
+    fill_in 'Neighborhood', with: 'Fidi'
+    # fill_in 'Time', with: 'Noon'
+    fill_in 'Body', with: 'Join me!'
+
+    click_button 'Save'
+
+    visit "/posts"
+
+    expect(page).to have_content post.place 
   end
 
 #   scenario 'updating a post' do 
