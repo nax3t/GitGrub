@@ -18,15 +18,3 @@ feature 'User sign up', type: :feature do
     expect(page).to have_content 'success'
   end
 =end
-RSpec.describe SessionsController, type: :controller do
-  describe '#index' do
-    before { get :index }
-
-    it 'returns http status 200' do
-      expect(response).to be_success
-    end
-
-    it 'renders the index view' do
-      expect(response).to render_template 'index'
-    end
-  end
