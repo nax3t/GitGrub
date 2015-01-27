@@ -1,11 +1,14 @@
+require 'rails_helper'
+require 'capybara/rails'
+
 feature 'Users creates a post', type: :feature do
   scenario 'creating a post' do 
     visit '/posts/new'
 
     fill_in 'Place', with: 'Chipotle'
     fill_in 'Neighborhood', with: 'Fidi'
-    fill_in 'When', with: 'Noon'
-    fill_in 'Description', with: 'Join me!'
+    fill_in 'Time', with: 'Noon'
+    fill_in 'Body', with: 'Join me!'
 
     click_button 'Save'
 

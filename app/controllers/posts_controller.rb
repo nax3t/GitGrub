@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   	@post = Post.new(post_params)
 
   	if @post.save
-  		redirect_to @post
+  		redirect_to @post, notice: 'Successfully created recipe!'
   	else
   		render :new
   	end
@@ -22,3 +22,8 @@ class PostsController < ApplicationController
   # def index
   # end
 end
+private
+
+def post_params
+    params.require(:post).permit(:place, :neighborhood, :time, :body)
+  end
