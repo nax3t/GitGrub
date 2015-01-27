@@ -16,14 +16,14 @@ feature 'Users creates a post', type: :feature do
     expect(page).to have_content 'Chipotle'
   end
 
-#   scenario 'showing a post' do 
-#     visit "/posts/#{post.id}"
+  scenario 'showing a post' do 
+    visit "/posts/#{post.id}"
 
-#     expect(page).to have_content post.place 
-#     expect(page).to have_content post.neighborhood 
-#     expect(page).to have_content post.time 
-#     expect(page).to have_content post.body  
-#   end
+    expect(page).to have_content post.place 
+    expect(page).to have_content post.neighborhood 
+    expect(page).to have_content post.time 
+    expect(page).to have_content post.body  
+  end
 
 #   scenario 'updating a post' do 
 #     visit "/posts/#{post.id}/edit"

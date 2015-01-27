@@ -66,4 +66,23 @@ RSpec.describe PostsController, type: :controller do
 		end
 	end
 
+	describe '#show' do 
+		let!(:post) { FactoryGirl.create(:post) }
+
+		before { get :show, id: post.id }
+
+		it 'returns 200' do 
+			expect(response).to be_success
+		end
+
+		it 'assigns @post' do 
+			expect(assigns(:post)).to eq post
+			expect(assigns(:post)).to be_persisted
+		end
+
+		it 'renders posts/show' do 
+			expect(response).to render_template 'posts/show'
+		end 
+	end
+
 end
