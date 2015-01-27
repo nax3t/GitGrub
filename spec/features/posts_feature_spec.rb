@@ -2,17 +2,20 @@ require 'rails_helper'
 require 'capybara/rails'
 
 feature 'Users creates a post', type: :feature do
+  # given(:post) { FactoryGirl.create(:post) }
+  let(:post) { FactoryGirl.create(:post) }
+  
   scenario 'creating a post' do 
     visit '/posts/new'
 
     fill_in 'Place', with: 'Chipotle'
     fill_in 'Neighborhood', with: 'Fidi'
-    fill_in 'Time', with: 'Noon'
+    # fill_in 'Time', with: 'Noon'
     fill_in 'Body', with: 'Join me!'
 
     click_button 'Save'
 
-    expect(page).to have_content 'Success'
+    expect(page).to have_content 'success'
     expect(page).to have_content 'Chipotle'
   end
 
