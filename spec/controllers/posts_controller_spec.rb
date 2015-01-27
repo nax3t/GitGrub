@@ -161,4 +161,19 @@ RSpec.describe PostsController, type: :controller do
 		end
 	end
 
+	describe '#destroy' do 
+		let!(:post) { FactoryGirl.create(:post) }
+
+		it 'destroys a post' do 
+			expect { 
+				delete :destroy, id: post.id
+			}.to change(Post, :count).by(-1)
+		end
+
+		it 'redirects to #index' do 
+			delete :destroy, id: post.id 
+			expect(response).to redirect_to posts_path
+		end
+	end
+
 end
