@@ -9,7 +9,6 @@ RSpec.describe SessionsController, type: :controller do
 		# 		}
 		# 	end
 		# end
-
 		# it 'creates a new session' do 
 		# 	expect(assigns(:user_id)).to eq user.id 
 		# end
@@ -29,3 +28,4 @@ RSpec.describe SessionsController, type: :controller do
 		end
 	end
 end
+

@@ -11,7 +11,5 @@ RSpec.describe UsersController, type: :controller do
 		it 'renders users/new' do
 			expect(response).to render_template 'users/new'
 		end
-
 	end
-
 end
