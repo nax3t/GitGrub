@@ -4,3 +4,21 @@
 <p><%= @post.body %></p>
 <%= link_to 'Edit', edit_post_path(@post) %> | 
 <%= link_to 'Delete', @post, method: :delete %>
+
+<br>
+
+<%= form_for @new_comment do |c| %>
+	<%= c.hidden_field :post_id, id: 'hidden_post' %>
+	<%= c.label :comment_body %>
+	<%= c.text_field :comment_body, id: 'comment_body', autofocus: true %>
+	<br>
+	<%= c.submit 'Save', id: 'ajaxbutton' %>
+<% end %>
+
+<br>
+
+<div class="comments">
+	<% @post.comments.each do |com| %>	
+		<p><%= com.comment_body %></p>
+	<% end %>
+</div>

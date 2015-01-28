@@ -83,6 +83,10 @@ RSpec.describe PostsController, type: :controller do
 		it 'renders posts/show' do 
 			expect(response).to render_template 'posts/show'
 		end 
+
+		# it 'assigns @comment to post' do
+		# 		expect(assigns(:comment)).to be_a Comment			
+		# end #will fail until build comment form on post show page
 	end
 
 	describe '#edit' do 

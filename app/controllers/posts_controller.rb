@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @new_comment = @post.comments.build #creates blank comment, sends to views/post enable displaying comment form, and form working
   end
 
   def edit
