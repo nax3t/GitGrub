@@ -40,6 +40,14 @@ feature 'Users creates a post', type: :feature do
     expect(page).to have_content post.place 
   end
 
+  scenario 'editing a post' do
+    visit "/posts/#{post.id}"
+
+    click_link "Edit"
+
+    expect(page).to have_content 'Edit Post'
+  end
+
   scenario 'updating a post' do 
     visit "/posts/#{post.id}/edit"
 
