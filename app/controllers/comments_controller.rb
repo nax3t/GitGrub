@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = current_user.comments.create(comment_params)
-		render json: @comment , status: :created
+		render json: @comment, status: :created
 	end
 
   # def update

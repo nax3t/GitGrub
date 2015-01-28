@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-github'
 # Figaro
 gem 'figaro'
+# Unobtrusive flash
+gem 'unobtrusive_flash', '>=3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
