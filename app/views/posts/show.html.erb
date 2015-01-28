@@ -1,2 +1,5 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1><%= @post.place %></h1>
+<p><%= @post.time %></p>
+<p><%= @post.neighborhood %></p>
+<p><%= @post.body %></p>
+<%= link_to 'Delete', @post, method: :delete %>

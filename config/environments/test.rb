@@ -41,5 +41,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   
   # Enable to make tests pass
-  # OmniAuth.config.test_mode = true
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = { 'provider' => 'github', 'uid' => '1234'}
 end
