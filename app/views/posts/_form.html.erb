@@ -4,7 +4,7 @@
 			<%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
 				  <%= f.input  :place %>
 				  <%= f.input  :neighborhood %>
-				  <%= f.input  :time, :as => :time_picker %>
+				  <%= f.input  :time, :as => :datetime_picker %>
 				  <%= f.input  :body %>
 				  <%= f.submit 'Save' %>
 				<% end %>
