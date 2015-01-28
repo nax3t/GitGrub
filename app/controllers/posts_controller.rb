@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @post = Post.new
   end
 
   def new
@@ -10,13 +11,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    # @post = current_user.posts.create(post_params)
-  	if @post.save
-  		redirect_to @post, :notice => "You have successfully created a post!"
-  	else
-  		render :new
-  	end
+    @post = Post.new(post_params)
+   
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.js   {}
+        format.json { render json: @post, status: :created, location: @post }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def show
