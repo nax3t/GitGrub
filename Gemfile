@@ -28,6 +28,12 @@ gem 'omniauth-github'
 gem 'figaro'
 # Unobtrusive flash
 gem 'unobtrusive_flash', '>=3'
+# Simple form
+gem 'simple_form'
+# Datepicker
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+# Moment
+gem 'momentjs-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

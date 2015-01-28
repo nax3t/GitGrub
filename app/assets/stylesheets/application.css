@@ -12,6 +12,7 @@
  *
  *= require unobtrusive_flash_ui
  *= require bootstrap.min
+ *= require bootstrap-datetimepicker.min
  *= require_tree .
  *= require_self
  */
