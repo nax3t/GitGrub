@@ -4,4 +4,5 @@ FactoryGirl.define do
     body "Join me!"
     neighborhood "Fidi"
   end
+
 end
