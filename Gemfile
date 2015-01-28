@@ -34,6 +34,8 @@ gem 'simple_form'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 # Moment
 gem 'momentjs-rails'
+# Font Awesome
+gem "font-awesome-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
