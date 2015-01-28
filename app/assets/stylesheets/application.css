@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require unobtrusive_flash_ui
+ *= require bootstrap.min
  *= require_tree .
  *= require_self
  */
