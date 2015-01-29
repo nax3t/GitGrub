@@ -4,5 +4,5 @@ class Post < ActiveRecord::Base
 	validates :body, presence: true
 	validates :neighborhood, presence: true
 	belongs_to :user
-	has_many :comments
+	has_many :comments, dependent: :destroy
 end
