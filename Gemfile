@@ -26,16 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-github'
 # Figaro
 gem 'figaro'
-# Unobtrusive flash
-gem 'unobtrusive_flash', '>=3'
-# Simple form
+# Simple Form
 gem 'simple_form'
-# Datepicker
-gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
-# Moment
-gem 'momentjs-rails'
-# Font Awesome
-gem "font-awesome-rails"
+# Rails 12factor for heroku
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -65,3 +60,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+ruby "2.2.0"
