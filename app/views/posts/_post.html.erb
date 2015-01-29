@@ -1,41 +1,44 @@
-<strong>User:</strong> <%= post.user.name %><br>
-<strong>Place:</strong> <%= post.place %><br>
-<strong>Time:</strong> <%= post.time %><br>
-<strong>Neighborhood:</strong> <%= post.neighborhood %><br>
-<strong>Message:</strong> <%= post.body %>
+<div class="panel panel-default">
+  <div class="panel-body">
+		<strong>User:</strong> <%= post.user.name %><br>
+		<strong>Place:</strong> <%= post.place %><br>
+		<strong>Time:</strong> <%= post.time %><br>
+		<strong>Neighborhood:</strong> <%= post.neighborhood %><br>
+		<strong>Message:</strong> <%= post.body %>
 
 
-<h2>Comments</h2>
-<div id="comments">
-	<% post.comments.each do |comment| %>
-	  <p>
-	    <strong>User:</strong>
-	    <%= comment.user.name %>
-	  </p>
-	 
-	  <p>
-	    <strong>Comment:</strong>
-	    <%= comment.body %>
-	  </p>
+		<h2>Comments</h2>
+		<div id="comments">
+			<% post.comments.each do |comment| %>
+			  <p>
+			    <strong>User:</strong>
+			    <%= comment.user.name %>
+			  </p>
+			 
+			  <p>
+			    <strong>Comment:</strong>
+			    <%= comment.body %>
+			  </p>
 
-	  <hr>
+			  <hr>
 
-	<% end %>
-</div>
+			<% end %>
+		</div>
 
-<h2>Add a comment:</h2>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">  
-      <%= simple_form_for([post, post.comments.build], html: { class: 'form-horizontal' }) do |f| %>
-        <p>
-          <%= f.input :body %>
-        </p>
-        <p>
-          <%= f.button 'submit' %>
-        </p>
-      <% end %>
-    </div>
+		<h2>Add a comment:</h2>
+		<div class="container-fluid">
+		  <div class="row">
+		    <div class="col-md-4">  
+		      <%= simple_form_for([post, post.comments.build], html: { class: 'form-horizontal' }) do |f| %>
+		        <p>
+		          <%= f.input :body %>
+		        </p>
+		        <p>
+		          <%= f.button 'submit' %>
+		        </p>
+		      <% end %>
+		    </div>
+		  </div>
+		</div>
   </div>
 </div>
-

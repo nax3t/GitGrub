@@ -1,8 +1,18 @@
-<h1>Posts</h1>
- 
-<div id="posts">
-<%= render @posts %>
+<div class="container" id="main">
+  <div class="row row-centered">
+  	<div class="col-md-6 col-centered">	 
+     	<div class="panel panel-default">
+        
+   			<div class="panel-body">
+					<%= render 'form' %>
+      	</div>
+    	</div>
+
+          <div id="posts">
+							<%= render @posts %>
+					</div>
+  </div><!--/row-->
 </div>
 
-<h1>Add a Post</h1>
-<%= render 'form' %>
+ 
+

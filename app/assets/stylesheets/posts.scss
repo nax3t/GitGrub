@@ -5,3 +5,16 @@
 .logo-margin {
 	margin-top: -8px;
 }
+
+/* centered columns styles */
+.row.row-centered {
+    text-align:center;
+}
+.col-md-6.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
