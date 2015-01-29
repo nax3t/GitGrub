@@ -7,7 +7,7 @@
         <% if current_user %>
 					<%= link_to 'Enter', posts_path %>
 				<% else %>
-  				<%= link_to "Sign up with GitHub", "/auth/github" %>
+  				<h3><%= link_to "/auth/github" do %>Sign up with Github <span class="mega-octicon octicon-mark-github"></span><% end %></h3>
 				<% end %>
 			</p>
     </div>
