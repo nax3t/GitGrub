@@ -30,7 +30,7 @@ gem 'simple_form'
 # Rails 12factor for heroku
 gem 'rails_12factor', group: :production
 # Unobtrusive flash
-gem 'unobtrusive_flash'
+gem 'unobtrusive_flash', '>=3'
 # Octicons
 gem 'octicons-rails'
 # Datetimepicker

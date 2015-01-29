@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to posts_path
     else
-      render :comment
+      redirect_to posts_path, :alert => "Comment must contain a message!"
     end
   end
 
