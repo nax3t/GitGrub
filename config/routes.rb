@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 
   resources :posts
   resources :comments, only: [:create, :update, :destroy]
+=======
+  resources :posts do
+    resources :comments
+  end
+>>>>>>> comments_model
 
   root "users#new"
   get "/auth/github/callback" => "sessions#create"
