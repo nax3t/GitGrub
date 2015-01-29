@@ -28,6 +28,8 @@ gem 'omniauth-github'
 gem 'figaro'
 # Simple Form
 gem 'simple_form'
+# Rails 12factor for heroku
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -57,3 +59,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+ruby "2.2.0"
