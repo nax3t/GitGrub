@@ -4,3 +4,27 @@
 <strong>Neighborhood:</strong> <%= post.neighborhood %><br>
 <strong>Message:</strong> <%= post.body %>
 <hr>
+
+<h2>Comments</h2>
+<% post.comments.each do |comment| %>
+  <p>
+    <strong>User:</strong>
+    <%= comment.user.name %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([post, post.comments.build], remote: true) do |f| %>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

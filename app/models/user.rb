@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 	validates :uid, presence: true
 	validates :name, presence: true
   has_many :posts
+  has_many :comments
   
 	def self.create_with_omniauth(auth)
     create! do |user|
