@@ -37,6 +37,8 @@ gem 'octicons-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 # MomentJS
 gem 'momentjs-rails'
+# Font Awesome
+gem "font-awesome-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

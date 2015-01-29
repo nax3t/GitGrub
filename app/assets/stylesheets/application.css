@@ -13,6 +13,7 @@
  *= require bootstrap.min
  *= require octicons
  *= require bootstrap-datetimepicker.min
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
