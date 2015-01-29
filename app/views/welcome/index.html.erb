@@ -1,0 +1,17 @@
+<body class="welcome">
+	<div class="container">
+     <div class="well welcome starter-template">
+       <h2>Meet new people</h2>
+       <h1>Get lunch with GitGrub</h1>
+       <p class="lead">
+        <% if current_user %>
+					<%= link_to 'Enter', posts_path %>
+				<% else %>
+  				<%= link_to "Sign up with GitHub", "/auth/github" %>
+				<% end %>
+			</p>
+    </div>
+  </div><!-- /.container -->
+</body>
+
+

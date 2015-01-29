@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :posts do
     resources :comments
   end
 
-  root "users#new"
+  root "welcome#index"
   get "/auth/github/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
   resources :users
