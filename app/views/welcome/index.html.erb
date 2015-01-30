@@ -1,17 +1,17 @@
-<body class="welcome">
-	<div class="container">
-     <div class="well welcome starter-template">
-       <h2>Meet new people</h2>
-       <h1>Get lunch with GitGrub</h1>
-       <p class="lead">
-        <% if current_user %>
-					<%= link_to 'Enter', posts_path %>
-				<% else %>
-  				<h3><%= link_to "/auth/github" do %>Sign up with Github <span class="mega-octicon octicon-mark-github"></span><% end %></h3>
-				<% end %>
-			</p>
-    </div>
-  </div><!-- /.container -->
-</body>
+	<div class="welcome-container">
+    <div class="container">
+       <div class="well welcome starter-template">
+         <h2>Meet new people</h2>
+         <h1>Get lunch with GitGrub</h1>
+         <p class="lead">
+          <% if current_user %>
+  					<%= link_to 'Enter', posts_path %>
+  				<% else %>
+    				<h3><%= link_to "/auth/github" do %>Sign up with Github <span class="mega-octicon octicon-mark-github"></span><% end %></h3>
+  				<% end %>
+  			</p>
+      </div>
+    </div><!-- /.container -->
+  </div>
 
 
