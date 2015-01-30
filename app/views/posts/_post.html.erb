@@ -2,7 +2,9 @@
   <div class="panel-body">
 		<p>Join <strong><%= post.user.name %></strong> @ <strong><%= post.place %></strong> for grub around <strong><%= post.time %></strong> in <strong><%= post.neighborhood %></strong></p>
 		<strong><%= post.user.name %>:</strong> <%= post.body %>
-		<p><%= link_to 'Edit', '#' %></p>
+		<%= if post.user == current_user %>
+			<p><%= link_to 'Edit', '#' %></p>
+		<% end %>
 
 		<hr>
 
