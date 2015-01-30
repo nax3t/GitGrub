@@ -7,7 +7,7 @@
           <% if current_user %>
   					<h2><%= link_to 'Enter', posts_path, class: 'btn btn-success btn-margin purp' %></h2>
   				<% else %>
-    				<h3><%= link_to "/auth/github" do %>Sign up with Github <span class="mega-octicon octicon-mark-github"></span><% end %></h3>
+    				<h3><%= link_to("/auth/github", class: 'purple') do %>Sign up with Github <span class="mega-octicon octicon-mark-github"></span><% end %></h3>
   				<% end %>
   			</p>
       </div>
