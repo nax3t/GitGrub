@@ -1,11 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-body">
-		<p>Join <strong><%= post.user.name %></strong> @ <strong><%= post.place %></strong> for grub around <strong><%= post.time %></strong> in <strong><%= post.neighborhood %></strong></p>
-		<strong><%= post.user.name %>:</strong> <%= post.body %>
+		<p><strong><%= post.user.name %></strong><br>
+			is getting grub at <strong><%= post.place %></strong> around <strong><%= post.time %></strong> in <strong><%= post.neighborhood %></strong>!</p>
+			<h4><%= post.body %></h4>
 
 		<hr>
 
-		<h4>Comments</h4>
 		<div id="comments">
 			<% post.comments.each do |comment| %>
 			 <div class="well well-sm"><p>
@@ -21,7 +21,7 @@
 		    <div class="col-md-4">  
 		      <%= simple_form_for([post, post.comments.build], class: 'form-horizontal') do |f| %>
 		        <p>
-		          <%= f.input :body %>
+		          <%= f.input :body, placeholder: 'Write a comment', label: false, :input_html => {:style => 'width: 300px'} %>
 		        </p>
 		        <p>
 		          <%= f.button 'submit' %>

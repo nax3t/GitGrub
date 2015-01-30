@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, except: [:index, :new, :create]
-  before_action :require_permission, only: [:edit, :destroy]
+  before_action :require_permission, only: [:destroy]
  
   def index
     @posts = Post.all
@@ -27,27 +27,17 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
-  end
-
-  def edit
-    require_permission
-  end
-
-  def update
-    if @post.update_attributes(post_params)
-      redirect_to posts_path
-    else
-      render :edit
-    end
-  end
-
   def destroy
     @post.destroy
     redirect_to posts_path
   end
 
-
+  def require_permission
+    if current_user != Post.find(params[:id]).user
+      redirect_to posts_path
+    end
+  end
+  
 private
   def post_params
     params.require(:post).permit(:time, :body, :place, :neighborhood)
@@ -57,9 +47,4 @@ private
     @post = Post.find(params[:id])
   end
 
-  def require_permission
-    if current_user != Post.find(params[:id]).user
-      redirect_to posts_path
-    end
-  end
 end
