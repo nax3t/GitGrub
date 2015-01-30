@@ -1,13 +1,11 @@
 <div class="panel panel-default">
   <div class="panel-body">
-		<div class="well">
-			<p>Join <strong><%= post.user.name %></strong> @ <strong><%= post.place %></strong> for grub around <strong><%= post.time %></strong> in <strong><%= post.neighborhood %></strong></p>
-			<strong><%= post.user.name %>:</strong> <%= post.body %>
-		</div>
-			<p><%= link_to 'Edit', '#' %></p>
+		<p>Join <strong><%= post.user.name %></strong> @ <strong><%= post.place %></strong> for grub around <strong><%= post.time %></strong> in <strong><%= post.neighborhood %></strong></p>
+		<strong><%= post.user.name %>:</strong> <%= post.body %>
+		<p><%= link_to 'Edit', '#' %></p>
 
 
-		<h2>Comments</h2>
+		<h4>Comments</h4>
 		<div id="comments">
 			<% post.comments.each do |comment| %>
 			  <p>
@@ -25,7 +23,6 @@
 			<% end %>
 		</div>
 
-		<h2>Add a comment:</h2>
 		<div class="container-fluid">
 		  <div class="row">
 		    <div class="col-md-4">  
