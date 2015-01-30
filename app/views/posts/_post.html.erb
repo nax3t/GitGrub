@@ -1,11 +1,10 @@
 <div class="panel panel-default">
   <div class="panel-body">
-		<strong>User:</strong> <%= post.user.name %><br>
-		<strong>Place:</strong> <%= post.place %><br>
-		<strong>Time:</strong> <%= post.time %><br>
-		<strong>Neighborhood:</strong> <%= post.neighborhood %><br>
-		<strong>Message:</strong> <%= post.body %>
-		<p><%= render 'edit_form' %></p>
+		<div class="well">
+			<p>Join <strong><%= post.user.name %></strong> @ <strong><%= post.place %></strong> for grub around <strong><%= post.time %></strong> in <strong><%= post.neighborhood %></strong></p>
+			<strong><%= post.user.name %>:</strong> <%= post.body %>
+		</div>
+			<p><%= link_to 'Edit', '#' %></p>
 
 
 		<h2>Comments</h2>
