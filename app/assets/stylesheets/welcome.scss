@@ -2,15 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.welcome-container { 
-  width: 100%;
+.welcome-bg { 
+  min-height: 100%;
 	padding-top: 50px;
   background: asset_url('ggrubbg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #f2f2f2;
 }
 
 .well.welcome {
