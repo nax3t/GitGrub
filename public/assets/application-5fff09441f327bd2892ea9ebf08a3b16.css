@@ -2062,17 +2062,22 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
   content: "\f23a";
 }
 /* line 5, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
+body.grey {
+  background-color: #f2f2f2;
+}
+
+/* line 9, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
 .logo-margin {
   margin-top: -8px;
 }
 
 /* centered columns styles */
-/* line 10, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
+/* line 14, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
 .row.row-centered {
   text-align: center;
 }
 
-/* line 13, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
+/* line 17, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
 .col-md-6.col-centered {
   display: inline-block;
   float: none;
@@ -2080,6 +2085,17 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
   text-align: left;
   /* inline-block space fix */
   margin-right: -4px;
+}
+
+/* line 26, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
+.btn.btn-margin.purp {
+  background-color: #7c26cb;
+  border-color: #7121bc;
+}
+
+/* line 31, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/posts.scss */
+.col-padding {
+  padding-bottom: 30px;
 }
 /* line 5, /home/ian/code/Personal/GitGrub/app/assets/stylesheets/welcome.scss */
 body.welcome {

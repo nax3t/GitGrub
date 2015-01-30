@@ -33,10 +33,6 @@ gem 'rails_12factor', group: :production
 gem 'unobtrusive_flash', '>=3'
 # Octicons
 gem 'octicons-rails'
-# Datetimepicker
-gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
-# MomentJS
-gem 'momentjs-rails'
 # Font Awesome
 gem "font-awesome-rails"
 # Use ActiveModel has_secure_password

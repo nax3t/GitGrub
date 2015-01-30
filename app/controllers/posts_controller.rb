@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_post, except: [:index, :new, :create]
-
+  before_action :require_permission, only: [:edit, :destroy]
+ 
   def index
     @posts = Post.all
     @posts = @posts.order("created_at desc")
@@ -27,15 +28,15 @@ class PostsController < ApplicationController
   end
 
   def show
-    @new_comment = @post.comments.build #creates blank comment, sends to views/post enable displaying comment form, and form working
   end
 
   def edit
+    require_permission
   end
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to @post
+      redirect_to posts_path
     else
       render :edit
     end
@@ -54,5 +55,11 @@ private
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def require_permission
+    if current_user != Post.find(params[:id]).user
+      redirect_to posts_path
+    end
   end
 end
