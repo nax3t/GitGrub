@@ -10,8 +10,8 @@
         <h4 class="modal-title" id="myModalLabel">Where are you going to eat?</h4>
       </div>      
       <div class="container-fluid">
-        <div class="row row-centered">
-          <div class="col-md-6 col-centered col-padding">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-padding">
             <%= simple_form_for(@post, remote: true, class: 'form-horizontal') do |f| %>
               <p>
                 <%= f.input :place %>

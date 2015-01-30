@@ -6,6 +6,7 @@
          <p class="lead">
           <% if current_user %>
   					<h2><%= link_to 'Enter', posts_path, class: 'btn btn-success btn-margin purp' %></h2>
+            <p><%= link_to 'Sign out', signout_path, :class => 'purple' %></p>
   				<% else %>
     				<h3><%= link_to("/auth/github", class: 'purple') do %>Sign up with Github <span class="mega-octicon octicon-mark-github"></span><% end %></h3>
   				<% end %>
